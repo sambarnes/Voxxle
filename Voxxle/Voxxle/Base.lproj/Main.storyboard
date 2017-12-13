@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Vox_Box" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a3f-lQ-UUt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Kj-jd-jIZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2R-XI-KXO" userLabel="RecenterButton">
+                                <rect key="frame" x="310" y="30" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jIR-li-7Oc"/>
+                                    <constraint firstAttribute="width" constant="50" id="wn5-hw-mh0"/>
+                                </constraints>
+                                <state key="normal" image="reset" backgroundImage="button_bg"/>
+                                <connections>
+                                    <action selector="recenterScene:" destination="BV1-FR-VrT" eventType="touchUpInside" id="8nG-7W-eny"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8C-ie-ZN1" userLabel="HomeButton">
+                                <rect key="frame" x="10" y="30" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7R2-8r-h5m"/>
+                                    <constraint firstAttribute="width" constant="50" id="JDf-zk-FG3"/>
+                                </constraints>
+                                <state key="normal" image="home" backgroundImage="button_bg"/>
+                                <connections>
+                                    <action selector="recenterScene:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Niy-qA-Gm7"/>
+                                    <action selector="showMainMenu" destination="BV1-FR-VrT" eventType="touchUpInside" id="oJI-1F-RXg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9A-2G-UD0" userLabel="HelpButton">
+                                <rect key="frame" x="162" y="30" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Ate-6o-Esn"/>
+                                    <constraint firstAttribute="height" constant="50" id="Dp7-dn-8Iv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="kbo-A7-kMf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="t01-WG-FfO"/>
+                                </constraints>
+                                <state key="normal" image="help" backgroundImage="button_bg"/>
+                                <connections>
+                                    <action selector="recenterScene:" destination="BV1-FR-VrT" eventType="touchUpInside" id="DY8-YJ-M0E"/>
+                                    <action selector="showHelpMessage:" destination="BV1-FR-VrT" eventType="touchUpInside" id="sLJ-7w-AfU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C9A-2G-UD0" firstAttribute="centerX" secondItem="a3f-lQ-UUt" secondAttribute="centerX" id="1yE-pT-WAs"/>
+                            <constraint firstItem="G2R-XI-KXO" firstAttribute="top" secondItem="gEO-Pq-nis" secondAttribute="top" constant="10" id="9NX-9n-B93"/>
+                            <constraint firstItem="gEO-Pq-nis" firstAttribute="trailing" secondItem="G2R-XI-KXO" secondAttribute="trailing" constant="15" id="Cta-FM-veP"/>
+                            <constraint firstItem="gEO-Pq-nis" firstAttribute="bottom" secondItem="0Kj-jd-jIZ" secondAttribute="bottom" id="F0K-Y1-pdm"/>
+                            <constraint firstItem="f8C-ie-ZN1" firstAttribute="leading" secondItem="gEO-Pq-nis" secondAttribute="leading" constant="10" id="Gpi-xG-gQX"/>
+                            <constraint firstItem="0Kj-jd-jIZ" firstAttribute="leading" secondItem="gEO-Pq-nis" secondAttribute="leading" id="Wci-ol-6aa"/>
+                            <constraint firstItem="C9A-2G-UD0" firstAttribute="top" secondItem="gEO-Pq-nis" secondAttribute="top" constant="10" id="bPd-zM-hr6"/>
+                            <constraint firstItem="gEO-Pq-nis" firstAttribute="trailing" secondItem="0Kj-jd-jIZ" secondAttribute="trailing" id="cfJ-th-569"/>
+                            <constraint firstItem="f8C-ie-ZN1" firstAttribute="top" secondItem="gEO-Pq-nis" secondAttribute="top" constant="10" id="jB0-Bd-piO"/>
+                            <constraint firstItem="0Kj-jd-jIZ" firstAttribute="top" secondItem="gEO-Pq-nis" secondAttribute="top" id="ul5-AP-NHO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gEO-Pq-nis"/>
+                    </view>
+                    <connections>
+                        <outlet property="helpButton" destination="C9A-2G-UD0" id="cQG-lf-AWm"/>
+                        <outlet property="mainMenuButton" destination="f8C-ie-ZN1" id="sjw-gL-jUV"/>
+                        <outlet property="sceneView" destination="0Kj-jd-jIZ" id="rp0-eY-A7I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button_bg" width="256" height="256"/>
+        <image name="help" width="100" height="100"/>
+        <image name="home" width="100" height="100"/>
+        <image name="reset" width="100" height="100"/>
+    </resources>
+</document>
